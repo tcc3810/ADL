@@ -102,7 +102,6 @@ class SeqTagger(torch.nn.Module):
     
     def forward(self, batch) -> Dict[str, torch.Tensor]:    
         # TODO: implement model forward
-        
         embeddings = self.embed(batch)
         embeddings = self.layernorm(embeddings)
         outputs , _ = self.lstm(embeddings)
