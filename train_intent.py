@@ -82,9 +82,6 @@ def main(args):
 
             train_loss += loss.item()
             
-            period.append(i + epoch * len(train_loader))
-            loss_x.append()
-
         # TODO: Evaluation loop - calculate accuracy and save model weights
         with torch.no_grad():
             model.eval()
